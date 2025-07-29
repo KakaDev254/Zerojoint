@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroJoint Company Ltd</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-content">
+        <div class="logo">
+          <img src="assets/zerojoint.jpg" alt="ZeroJoint Logo" />
+        </div>
+
+        <!-- Hamburger icon (3 lines) -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#" class="quote-btn">Get Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="overlay">
+        <div class="container hero-inner">
+          <!-- Left Content -->
+          <div class="hero-left">
+            <h1>
+              <span>Where Innovation</span><br /><strong
+                >Meets Execution</strong
+              >
+            </h1>
+            <p>
+              ZeroJoint Company Limited delivers excellence in civil
+              engineering, architectural design, and construction supervision
+              with innovative solutions that shape tomorrow's infrastructure.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn-primary">Explore Our Services</a>
+              <a href="#" class="btn-secondary">View Projects</a>
+            </div>
+            <div class="stats">
+              <div>
+                <span>50+</span>
+                <p>Projects</p>
+              </div>
+              <div>
+                <span>100+</span>
+                <p>Clients</p>
+              </div>
+              <div>
+                <span>15+</span>
+                <p>Years</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="hero-right">
+            <div class="card quality-control">
+              <h4>Quality Control</h4>
+              <p>Professional site supervision</p>
+            </div>
+            <div class="card expert-engineering">
+              <h4>Expert Engineering</h4>
+              <p>Professional civil engineering solutions</p>
+            </div>
+            <div class="card design-excellence">
+              <h4>Design Excellence</h4>
+              <p>Innovative architectural drawings</p>
+            </div>
+          </div>
+
+          <!-- Scroll Mouse Icon -->
+          <div class="scroll-icon">
+            <span class="mouse"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
