@@ -49,6 +49,7 @@
         text-align: center;
         position: relative;
         overflow: hidden;
+        margin-bottom: 2rem;
       }
 
       .hero h1 {
@@ -374,7 +375,12 @@
       <p>
         Contact us today for a consultation and let’s bring your vision to life.
       </p>
-      <a href="#quote" class="btn btn-light text-primary">Get a Quote</a>
+
+      <a
+        href="https://wa.me/254794725421?text=Hello%20ZeroJoint%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20your%20construction%20services.%20Please%20assist."
+        class="btn btn-light text-primary"
+        >Get a Quote</a
+      >
     </section>
     <footer class="footer">
       <div class="container footer-content">
@@ -427,5 +433,14 @@
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

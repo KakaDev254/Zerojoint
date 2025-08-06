@@ -35,7 +35,13 @@
           <a href="service.html">Services</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a href="#contact" class="quote-btn">Get Quote</a>
+          <a
+            href="https://wa.me/254794725421?text=Hello%20ZeroJoint%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20your%20construction%20services.%20Please%20assist."
+            class="quote-btn"
+            target="_blank"
+          >
+            Request a Quote
+          </a>
         </nav>
       </div>
     </header>
@@ -58,7 +64,13 @@
             </p>
             <div class="home-hero-buttons">
               <a href="#" class="btn-primary">Explore Our Services</a>
-              <a href="#" class="btn-secondary">View Projects</a>
+              <a
+                href="https://wa.me/254794725421?text=Hello%20ZeroJoint%2C%20I%20came%20across%20your%20website%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20construction%20services."
+                class="btn-secondary"
+                target="_blank"
+              >
+                Chat with Us on WhatsApp
+              </a>
             </div>
             <div class="stats">
               <div>
@@ -70,7 +82,7 @@
                 <p>Clients</p>
               </div>
               <div>
-                <span>15+</span>
+                <span>5+</span>
                 <p>Years</p>
               </div>
             </div>
@@ -152,7 +164,14 @@
           your specific requirements.
         </p>
         <div class="cta-buttons">
-          <a href="#contact" class="btn btn-primary2">Get Free Consultation</a>
+          <a
+            href="https://wa.me/254794725421?text=Hello%20ZeroJoint%2C%20I%27d%20like%20to%20request%20a%20free%20consultation%20regarding%20your%20services."
+            class="btn btn-primary2"
+            target="_blank"
+          >
+            Request Free Consultation
+          </a>
+
           <a href="#portfolio" class="btn btn-secondary2">View Portfolio</a>
         </div>
       </div>
@@ -235,11 +254,35 @@
         </p>
 
         <div class="contact-wrapper">
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="text" placeholder="Subject" />
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/oswereenock@gmail.com"
+            method="POST"
+          >
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <!-- Redirect after submission -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://zerojoint.netlify.app/thank-you.html"
+            />
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input type="text" name="subject" placeholder="Subject" />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
             <button type="submit">Send Message</button>
           </form>
 
