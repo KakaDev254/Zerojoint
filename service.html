@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEROPOINT | Our Services</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      :root {
+        --primary: #0d1b2a;
+        --accent: #e63946;
+        --bg-light: #f5f6fa;
+        --bg-dark: #041981;
+        --text-light: #f1faee;
+        --card-bg: #ffffff;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--bg-light);
+        color: var(--primary);
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero {
+        background: linear-gradient(to right, #e22810, var(--bg-dark));
+        color: var(--text-light);
+        padding: 120px 20px 160px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 15px auto 0;
+        opacity: 0.95;
+      }
+
+      .services-section {
+        position: relative;
+        margin-top: -100px;
+        padding: 100px 20px 60px;
+        z-index: 2;
+      }
+
+      .section-title {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section-intro {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 50px;
+        color: #444;
+      }
+
+      .card-service {
+        background: var(--card-bg);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        padding: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        border: none;
+      }
+
+      .card-service:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-service .icon {
+        font-size: 28px;
+        color: white;
+        background-color: var(--accent);
+        width: 50px;
+        height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .card-service .title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--primary);
+      }
+
+      .card-service .desc {
+        font-size: 15.5px;
+        color: #333;
+      }
+
+      .badge-top {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--accent);
+        color: white;
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 30px;
+        font-weight: 500;
+      }
+
+      .service-cta {
+        background: linear-gradient(to right, #e22810, var(--bg-dark));
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .service-cta h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      .service-cta p {
+        font-size: 17px;
+        opacity: 0.95;
+        max-width: 700px;
+        margin: auto auto 30px;
+      }
+
+      .service-cta a.btn {
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-content">
+        <div class="logo">
+          <img src="assets/zerojoint.jpg" alt="ZeroJoint Logo" />
+        </div>
+
+        <!-- Hamburger icon (3 lines) -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="quote-btn">Get Quote</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Our Core Services</h1>
+      <p>
+        Comprehensive construction and renovation services delivered with
+        expertise and precision
+      </p>
+    </section>
+
+    <!-- Construction Services -->
+    <section class="services-section container">
+      <h2 class="section-title">Construction & Engineering</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-building"></i></div>
+            <div class="title">Construction & Renovation</div>
+            <div class="desc">
+              Complete building construction and renovation services with
+              attention to quality and detail.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-clipboard"></i></div>
+            <div class="title">Project Management</div>
+            <div class="desc">
+              Professional project management ensuring timely completion and
+              budget adherence.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-wrench"></i></div>
+            <div class="title">Structural Work</div>
+            <div class="desc">
+              Expert structural modifications and repairs with certified
+              engineering support.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-paint"></i></div>
+            <div class="title">Painting & Finishing</div>
+            <div class="desc">
+              Professional painting services with premium materials and expert
+              craftsmanship.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-plug"></i></div>
+            <div class="title">Plumbing & Electrical</div>
+            <div class="desc">
+              Complete plumbing and electrical installations and maintenance
+              services.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-cog"></i></div>
+            <div class="title">Installation Services</div>
+            <div class="desc">
+              Expert installation of fixtures, fittings, and custom millwork.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interior Design Services -->
+    <section class="services-section container">
+      <h2 class="section-title">Interior Design Services</h2>
+      <p class="section-intro">
+        <strong>ZEROPOINT</strong> provides tailored interior design services
+        for commercial and residential spaces:
+      </p>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <span class="badge-top">Top Rated</span>
+            <div class="icon"><i class="bx bx-cabinet"></i></div>
+            <div class="title">1. Custom Cabinetry</div>
+            <div class="desc">
+              Kitchen, wardrobe, and bathroom cabinetry with sleek functionality
+              and modern looks.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-door-open"></i></div>
+            <div class="title">2. Doors & Ceilings</div>
+            <div class="desc">
+              Decorative ceiling panels and doors with acoustic and thermal
+              advantages.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-chair"></i></div>
+            <div class="title">3. Furniture & Upholstery</div>
+            <div class="desc">
+              Custom furniture for offices, hotels, lounges, and apartments.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-image"></i></div>
+            <div class="title">4. Wall Finishes</div>
+            <div class="desc">
+              Modern wall finishes including wallpaper, wood panels, and
+              textures.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-bed"></i></div>
+            <div class="title">5. Acoustic Panels</div>
+            <div class="desc">
+              Partitions and acoustic treatments for sound management in stylish
+              spaces.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-shape-polygon"></i></div>
+            <div class="title">6. Metal & Steel Works</div>
+            <div class="desc">
+              Decorative and structural steelwork for custom interiors.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-window"></i></div>
+            <div class="title">7. Glass & Glazing</div>
+            <div class="desc">
+              Elegant partitions, glass doors, and glazed features for
+              light-filled spaces.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-blinds"></i></div>
+            <div class="title">8. Curtains & Blinds</div>
+            <div class="desc">
+              Stylish and functional window treatments for modern interiors.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-bulb"></i></div>
+            <div class="title">9. Lighting & Fixtures</div>
+            <div class="desc">
+              Elegant lighting designs to match your space’s aesthetic.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card card-service">
+            <div class="icon"><i class="bx bx-layer"></i></div>
+            <div class="title">10. SPC Flooring</div>
+            <div class="desc">
+              Water-resistant and low-maintenance SPC flooring installations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="service-cta">
+      <h2>Ready to Start Your Project?</h2>
+      <p>
+        Contact us today for a consultation and let’s bring your vision to life.
+      </p>
+      <a href="#quote" class="btn btn-light text-primary">Get a Quote</a>
+    </section>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">ZeroJoint</h3>
+          <p>
+            Building the future with innovation, precision, and a passion for
+            excellence in every project we undertake.
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Interior Design</a></li>
+            <li><a href="#">Site Supervision</a></li>
+            <li><a href="#">Architectural Drawings</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p><i class="bx bxs-map"></i> Nairobi, Kenya</p>
+          <p><i class="bx bxs-phone"></i> +254 794 725421 / +254755 141 174</p>
+          <p><i class="bx bxs-envelope"></i> zerojoint96@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZeroJoint. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
