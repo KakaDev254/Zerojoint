@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZeroJoint Projects</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f7f7f7;
+        color: #333;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("assets/design1.jpg") no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        z-index: 1;
+      }
+
+      .toggle-buttons {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .toggle-buttons button {
+        padding: 10px 25px;
+        margin: 0 10px;
+        background: transparent;
+        border: 2px solid;
+        border-image: linear-gradient(45deg, #d32f2f, #1976d2) 1;
+        border-radius: 30px;
+        color: #d32f2f;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .toggle-buttons button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #d32f2f, #1976d2);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .toggle-buttons button:hover::before {
+        transform: scaleX(1);
+      }
+
+      .toggle-buttons button:hover {
+        color: #fff;
+      }
+
+      /* Optional: button-specific initial text colors */
+      .toggle-buttons .construction-btn {
+        color: #d32f2f;
+      }
+
+      .toggle-buttons .interior-btn {
+        color: #1976d2;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: scale(1.03);
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .card:hover img {
+        transform: scale(1.1);
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .card-body h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .card-body p {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-content">
+        <div class="logo">
+          <img src="assets/zerojoint.jpg" alt="ZeroJoint Logo" />
+        </div>
+
+        <!-- Hamburger icon (3 lines) -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="service.html">Services</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a
+            href="https://wa.me/254794725421?text=Hello%20ZeroJoint%2C%20I%27m%20interested%20in%20getting%20a%20quote%20for%20your%20construction%20services.%20Please%20assist."
+            class="quote-btn"
+            target="_blank"
+          >
+            Request a Quote
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Our Projects</h1>
+    </section>
+
+    <!-- Toggle Buttons -->
+    <div class="toggle-buttons">
+      <button class="construction-btn" onclick="showProjects('construction')">
+        Construction
+      </button>
+      <button class="interior-btn" onclick="showProjects('interior')">
+        Interior
+      </button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects" id="projects-container">
+      <!-- JS will inject projects here -->
+    </div>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-column">
+          <h3 class="footer-logo">ZeroJoint</h3>
+          <p>
+            Building the future with innovation, precision, and a passion for
+            excellence in every project we undertake.
+          </p>
+          <div class="footer-socials">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Interior Design</a></li>
+            <li><a href="#">Site Supervision</a></li>
+            <li><a href="#">Architectural Drawings</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <p><i class="bx bxs-map"></i> Nairobi, Kenya</p>
+          <p><i class="bx bxs-phone"></i> +254 794 725421 / +254755 141 174</p>
+          <p><i class="bx bxs-envelope"></i> zerojoint96@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZeroJoint. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      const projects = {
+        construction: [
+          {
+            title: "High-Rise Apartments",
+            desc: "Luxury apartment buildings.",
+            img: "assets/hero.jpg",
+          },
+
+          {
+            title: "Office Complex",
+            desc: "Corporate office towers.",
+            img: "assets/design1.jpg",
+          },
+        ],
+        interior: [
+          {
+            title: "Modern Living Room",
+            desc: "Elegant and stylish interiors.",
+            img: "assets/living.jpg",
+          },
+
+          {
+            title: "Office Interior",
+            desc: "Productive workspaces.",
+            img: "assets/office.jpeg",
+          },
+        ],
+      };
+
+      function showProjects(type) {
+        const container = document.getElementById("projects-container");
+        container.innerHTML = "";
+
+        projects[type].forEach((project) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+          <img src="${project.img}" alt="${project.title}" />
+          <div class="card-body">
+            <h3>${project.title}</h3>
+            <p>${project.desc}</p>
+          </div>
+        `;
+          container.appendChild(card);
+        });
+      }
+
+      // Load construction by default
+      showProjects("construction");
+    </script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
