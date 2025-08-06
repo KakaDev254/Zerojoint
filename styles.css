@@ -799,13 +799,13 @@ a {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .footer-column {
-    text-align: center;
+    flex: 1 1 100%; /* make columns stack vertically */
+    margin-bottom: 1rem;
   }
-
   .footer-socials {
     justify-content: center;
   }
